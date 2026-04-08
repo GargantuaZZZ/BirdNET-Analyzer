@@ -181,3 +181,7 @@ BirdNET_analysis_params.csv
 
 # Build files
 entitlements.plist
+
+# test data
+birdset_train/
+output_inat_sounds/
