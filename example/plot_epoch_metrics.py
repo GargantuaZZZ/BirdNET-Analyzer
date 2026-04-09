@@ -46,6 +46,15 @@ MANUAL_TEMPLATE = {
 
 
 PRESET_ARRAY_TEMPLATES = {
+    "hsn_multilabel": {
+        "train_loss": [2.7320, 2.3371, 2.2900, 2.2567, 2.2407, 2.2306],
+        "val_loss": [1.9773, 2.2478, 2.4352, 2.3741, 2.4451, 2.4188],
+        "train_auprc": [0.7436, 0.7969, 0.8034, 0.8082, 0.8106, 0.8118],
+        "val_auprc": [0.4773, 0.4657, 0.4602, 0.4623, 0.4533, 0.4490],
+        "train_auroc": [0.9144, 0.9303, 0.9320, 0.9339, 0.9347, 0.9354],
+        "val_auroc": [0.9060, 0.9003, 0.8934, 0.8910, 0.8898, 0.8896],
+        "learning_rate": [0.00016667, 0.00033333, 0.0005, 0.0005, 0.00049848, 0.00049394],
+    },
     "hsn": {
         "train_loss": [1.7791, 0.8296, 0.6845, 0.6172, 0.5793, 0.5539, 0.535],
         "val_loss": [2.706, 2.6931, 2.7916, 3.2568, 3.3502, 3.3864, 3.3226],
@@ -361,7 +370,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--array_name",
         default="custom",
-        help="Template name for --format array. Use 'custom' or one of: train, nbp, nes, per, pow, sne, ssw, uhh",
+        help="Template name for --format array. Use 'custom' or one of: hsn_multilabel, hsn, nbp, nes, per, pow, sne, ssw, uhh",
     )
     p.add_argument("--title", default="BirdNET Training Curves", help="Figure title")
     p.add_argument(
